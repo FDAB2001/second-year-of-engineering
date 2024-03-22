@@ -83,6 +83,9 @@ void BOTON_PRESIONADO(GtkButton *button, gpointer data){
 		break;
 	}
 }
+void ENTER(GtkButton *button, gpointer data){
+	//Aca llamar el codigo
+}
  int main (int argc, char *argv[])
  {
     gtk_init (&argc, &argv);
@@ -98,7 +101,7 @@ void BOTON_PRESIONADO(GtkButton *button, gpointer data){
     g_signal_connect(botonc, "clicked",G_CALLBACK (BOTON_PRESIONADO),GINT_TO_POINTER(100));
     g_signal_connect(botond, "clicked",G_CALLBACK (BOTON_PRESIONADO),GINT_TO_POINTER(500));
     g_signal_connect(botonv, "clicked",G_CALLBACK (BOTON_PRESIONADO),GINT_TO_POINTER(1000));
-
+	g_signal_connect(botonigual, "clicked",G_CALLBACK (ENTER),NULL));
 
     g_signal_connect (calcGTK, "destroy", G_CALLBACK (gtk_main_quit), NULL);
 
